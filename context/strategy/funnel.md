@@ -1,16 +1,16 @@
 ---
 type: context
-status: stub
+status: draft
 owner: unassigned
 created: 2026-09-07
-updated: 2026-09-07
-sources: []
-tags: [template]
+updated: 2026-10-15
+sources: [raw/sources/2026-10-15-setup-answers/answers.md]
+tags: [audience]
 ---
 
 # Funnel
 
-> Status: empty template. Fill from the author's sources.
+> Status: draft. Only the conversion paths are stated; everything else is open.
 
 ## What each stage does
 
@@ -20,6 +20,7 @@ tags: [template]
 
 ## Conversion target
 
+Two next steps the author named: a resource and a call. The specific resource, its keyword and the call link are not yet defined.
 
 ## Inbound response
 
@@ -37,4 +38,4 @@ tags: [template]
 
 ## Source Notes
 
-No author source material has been added.
+- Conversion target: [[raw/sources/2026-10-15-setup-answers/answers|setup answers]], human statement.

@@ -2,6 +2,10 @@
 
 Blank context pages, grouped by purpose. These headings are prompts, not claims about the author.
 
+## raw sources
+
+- [[raw/sources/2026-10-15-setup-answers/answers|Setup answers, 2026-10-15]]
+
 ## identity
 
 - [[identity/backstory|Backstory]]

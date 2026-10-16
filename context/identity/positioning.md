@@ -1,19 +1,20 @@
 ---
 type: context
-status: stub
+status: draft
 owner: unassigned
 created: 2026-09-07
-updated: 2026-09-07
-sources: []
-tags: [template]
+updated: 2026-10-15
+sources: [raw/sources/2026-10-15-setup-answers/answers.md]
+tags: [audience]
 ---
 
 # Positioning
 
-> Status: empty template. Fill from the author's sources.
+> Status: draft from one short setup answer. Point of view, evidence and stance are unknown.
 
 ## Audience
 
+SaaS founders and B2B founders who need outbound cold email (see [[ideal-follower]]).
 
 ## Problem
 
@@ -23,6 +24,7 @@ tags: [template]
 
 ## Promise
 
+Automated cold email that books more meetings and helps close more deals (author's own wording). No outcome numbers are supplied, so none are claimed.
 
 ## Evidence
 
@@ -32,6 +34,7 @@ tags: [template]
 
 ## Relationship to the company
 
+The author's company offers the automated cold email service. Company name not yet supplied.
 
 ## Related Pages
 
@@ -39,4 +42,4 @@ tags: [template]
 
 ## Source Notes
 
-No author source material has been added.
+- Audience, promise and company relationship: [[raw/sources/2026-10-15-setup-answers/answers|setup answers]], human statement. Problem, point of view, evidence and what to stand against remain empty.
