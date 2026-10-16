@@ -1,98 +1,75 @@
-# LinkedIn Funnel
+# LinkedIn Funnel: Bivek Raj Shakya
 
-**Turn what you know into content, identify the right people engaging with it, and start useful sales conversations.**
+My working copy of the LinkedIn Funnel template. It turns what I know about automated cold email into LinkedIn content, finds the people engaging with it and starts sales conversations.
 
-This is the shareable template behind my LinkedIn funnel. Make your own copy, add your experience and offer, and build the system around the people you want to help.
+## Who this is for
 
-**[Use this template →](https://github.com/new?template_name=linkedin-funnel&template_owner=timscheuerai)** · [Browse all skills](skills/README.md) · [Download ZIP](https://github.com/timscheuerai/linkedin-funnel/archive/refs/heads/main.zip)
+SaaS founders and B2B founders who need outbound cold email.
 
-## The content waterfall
+## What I offer
 
-[![The content waterfall](assets/content-waterfall.gif)](guides/content-waterfall.md)
+Automated cold email that books more meetings and helps close more deals. No outcome numbers are on file yet, so none are claimed.
 
-1 idea a week becomes 1 long video, and the video waterfalls into posts on every platform, with a Claude Code skill for every step.
+## Funnel
 
-**[Watch the full walkthrough on YouTube](https://www.youtube.com/watch?v=8z_GiPtnO80)** · [Setup guide for Claude Code](guides/content-waterfall.md) · [Editable map](assets/content-waterfall.excalidraw) · [The 10 content waterfall skills](skills/README.md#content-waterfall-skills)
+1. **Content:** posts that earn attention from SaaS and B2B founders.
+2. **Signals:** people engaging with my posts are collected and qualified against my ICP.
+3. **Conversations:** a resource and a call are the two next steps. The specific resource, keyword and call link are not defined yet.
 
-## What you get
+## Status
 
-| Included | What it helps you do |
+| Area | State |
 |---|---|
-| [23 core content and branding skills](skills/README.md#the-23-core-skills) | Research, write, repurpose and design content in your own voice |
-| [10 content waterfall skills](skills/README.md#content-waterfall-skills) | Turn 1 video a week into posts on every platform, then into conversations |
-| [6 additional video skills](skills/README.md#additional-video-skills) | Keep the full content-vault skill coverage, including Shorts and Manim |
-| [Your personal-brand second brain](context/index.md) | Give your agent your positioning, audience, voice, stories and proof |
-| [Notion setup and public example](guides/notion.md) | Organize your pillars, topics, hooks and content board |
-| [OXYGEN Profile Watcher setup](guides/profile-watcher.md) | Bring people engaging with recent LinkedIn posts into one table |
-| [ICP qualification templates](guides/qualification.md) | Score company fit and person fit, with evidence and reasons |
-| [DM conversion framework](guides/dm-conversion.md) | Deliver the resource, understand the problem and agree on a next step |
-| [Content waterfall guide](guides/content-waterfall.md) · [Graphic](assets/content-waterfall@2x.png) · [Editable map](assets/content-waterfall.excalidraw) | Run the weekly system from idea to conversations in Claude Code |
-| [High-resolution flowchart](assets/linkedin-funnel.png) · [Animation](assets/linkedin-funnel.gif) · [Editable file](assets/linkedin-funnel.excalidraw) | See how the whole funnel connects |
+| Audience, positioning, funnel | Draft from one short setup answer (2026-10-15) |
+| Voice, backstory, stories, proof | Not supplied yet |
+| Writing samples | None yet |
+| Notion board | Not set up |
+| OXYGEN Profile Watcher | Not set up |
+| EmailBison (campaign data) | Read-only helper in `scripts/emailbison.py`, needs `.env` (see [EmailBison](#emailbison)) |
 
-All skills are in the visible **[`skills/`](skills/)** folder. There are **43 in total**: 23 core skills, 10 content waterfall skills, 6 additional video skills and 4 OXYGEN workflow helpers. The [catalog](skills/README.md) shows where every original content-vault skill lives.
+## Working here
 
-## Start here
-
-1. Click **[Use this template](https://github.com/new?template_name=linkedin-funnel&template_owner=timscheuerai)** and create your own repository. Choose **Private** if you will add personal or customer information.
-2. Clone your copy and open the whole folder in Codex, Claude Code or your preferred coding agent. You can also download the ZIP to work locally.
-3. Paste this prompt:
+Open this folder in Claude Code and read `CLAUDE.md` first, then the skill for the task.
 
 ```text
-Read AGENTS.md and README.md. Help me make LinkedIn Funnel my own.
-Use setup-workspace, capture-context and voice-calibration to build my
-context from the material I provide. Start with my audience, offer,
-experience and writing samples. Ask for the few missing details that
-matter, keep unknown claims empty, and draft my first useful LinkedIn
-post in chat using linkedin-copywriter.
+context/    My positioning, audience, voice, stories and proof (source of truth)
+skills/     Content, branding, media and OXYGEN instructions
+guides/     Notion, Profile Watcher, qualification, DM and content waterfall setup
+templates/  ICP rubric, qualification prompt and output schema
+scripts/    Helpers, including the read-only EmailBison client
 ```
 
-Bring your offer, a short interview or notes, and 5–10 representative writing samples if you have them. The [context interview](context/templates/context-interview.md) gives you a starting point. **You can create your first post without Notion or OXYGEN.**
+### Next steps
 
-The repository includes skill-discovery links for Codex and Claude Code. If your agent does not discover them, point it to `skills/README.md` and the relevant `SKILL.md` file.
+- Add 5–10 writing samples and run `voice-calibration`.
+- Capture real founder language for the ideal follower: problems, objections, wording.
+- Add proof: client results, stories, numbers I can stand behind.
+- Define the resource, comment keyword and call link.
+- Draft the first post with `linkedin-copywriter`.
 
-## The three parts
+## EmailBison
 
-### 1. Create content that attracts the right people
+EmailBison is the cold email campaign system behind my offer. LinkedIn brings in attention and warm signals; EmailBison is where the outbound cold email side runs and where I can pull campaign results to use as proof in content.
 
-Fill your [second brain](context/index.md), define your audience and calibrate your voice. Use `linkedin-copywriter` for one post, `week-posts` for a weekly plan and `lead-magnet-creator` for a resource your readers can use. Set up [Notion](guides/notion.md) when you want a content board.
+`scripts/emailbison.py` is a read-only GET client. It never sends, edits or deletes anything.
 
-### 2. Find the people who fit
-
-Follow the [Profile Watcher guide](guides/profile-watcher.md) to collect engagement on your profile or other relevant public profiles. Add the [qualification prompt](templates/qualification-prompt.md), [rubric](templates/icp-rubric.md) and [output schema](templates/qualification-output.schema.json) to assess company and person fit separately.
-
-When you are ready, paste this into your OXYGEN-connected agent:
-
-```text
-Read guides/profile-watcher.md and guides/qualification.md. Help me set up
-the native OXYGEN Profile Watcher for [MY REAL LINKEDIN PROFILE URL].
-Verify my workspace and preview the profiles, daily collection scope and
-recurring credit cap. Use my ICP and offer to prepare the qualification
-rubric. Once collection is active, inspect the table's actual evidence
-columns and preview one qualification row before paid scoring.
+```bash
+cp .env.example .env   # fill in EMAILBISON_API_KEY and EMAILBISON_URL
+python3 scripts/emailbison.py /api/campaigns             # prints the first 4,000 characters
+python3 scripts/emailbison.py /api/campaigns out.json    # saves the full response
 ```
 
-The watcher is a native OXYGEN feature. Creating it begins collection immediately and daily thereafter. Collection and AI qualification have separate usage costs; inspect the previews for your workspace. The guides cover setup and calibration.
+- `EMAILBISON_URL` is my EmailBison instance's base URL; `EMAILBISON_API_KEY` is sent as a Bearer token.
+- `.env` is gitignored. Never commit the key, and keep raw campaign exports with real prospect data out of public commits.
+- Only report numbers pulled from real campaign data. Until I do, no outcome claims go in posts (see `context/identity/positioning.md`).
 
-### 3. Turn relevant interest into conversations
+### Setup
 
-Use the [DM framework](guides/dm-conversion.md) to deliver what someone requested, learn what they need and offer a useful next step. Review the qualified cohort before setting up a Sequence. Existing conversations stay in Unibox; new outreach uses native Sequences.
+1. Copy `.env.example` to `.env` and fill it in.
+2. Run the command above to confirm the connection.
+3. Save any exports you use as evidence under `context/raw/sources/` (private copy only), then capture them with `capture-context`.
 
-Track qualified conversations, opportunities and signups alongside reach. That is how you see whether your content is helping the business.
+## Origin
 
-## Make it yours
-
-```text
-skills/       Content, branding, media and OXYGEN instructions
-context/      Your blank personal-brand and second-brain scaffold
-guides/       Notion, collection, qualification, DM and content waterfall setup
-templates/    Editable ICP rubric, qualification prompt and output schema
-examples/     Synthetic qualification decisions to calibrate against
-company/      Example buyer rubrics; keep your own in company/private/
-assets/       Funnel and content waterfall graphics, animations and editable Excalidraw maps
-```
-
-The scaffold starts blank. The [Adam Robinson webinar report and content example](https://github.com/OXYGEN-CRO/adam-robinson-content-engine) is there to show what a populated system can look like. Use your own biography, voice and proof when filling yours.
-
-The funnel artwork illustrates my system and supplied results. Use it as a reference for your setup. Your results will depend on your audience, offer, content and follow-through.
-
-Built by [Tim Scheuer](https://github.com/timscheuerai). [Sources and scope](guides/sources.md) · [License](LICENSE)
+Built from the [LinkedIn Funnel template](https://github.com/timscheuerai/linkedin-funnel) by Tim Scheuer. See [sources and scope](guides/sources.md) and the [license](LICENSE).
+# content-system
